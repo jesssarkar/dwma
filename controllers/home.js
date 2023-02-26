@@ -21,7 +21,8 @@ module.exports = {
             console.log(newItem)
             res.redirect("/")
         } catch (err){
-
+            if(err) return res.status(500).send(err)
+            res.redirect('/')
         }
     }
 }
