@@ -10,19 +10,30 @@
 <body>
     <h1>This is the homepage</h1>
     <form action="/new" method="POST">
-        <label for="textinput">Input Text</label>
-        <input type="text" name="textinput">
+        <label for="nameinput">Pharmacy Name</label>
+        <input type="text" name="nameinput">
         <br>
-        <label for="numinput">Input Number</label>
-        <input type="number" name="numinput" value=0>
+        <label for="addressinput">Pharmacy Address</label>
+        <input type="text" name="addressinput">
         <br>
-        <button type="submit">Add Item</button>
+        <label for="numinput">Phone Number</label>
+        <input type="text" name="numinput">
+        <br>
+        <span>In Stock?</span><br>
+        <input type="radio" id="yes" name="instock" value="Yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="instock" value="No">
+        <label for="no">No</label><br>
+        <button type="submit">Add</button>
     </form>
     <ul>
        <% itemList.forEach(item => { %>
         <li>
-             <div><%= item.textinput %></div>
+             <div><%= item.nameinput %></div>
+             <div><%= item.addressinput %></div>
              <div><%= item.numinput %></div>
+             <div><span>In Stock?</span><%= item.instock %></div>
+             <div><span>Last Updated:</span><%= item.date.toLocaleString() %></div>
              <a href="/edit/<%= item._id %>">Edit</a>
              <a href="/edit/remove/<%= item._id %>">Remove</a>
         </li>

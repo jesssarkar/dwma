@@ -27,8 +27,11 @@ module.exports = {
         try {
             await ItemList.findByIdAndUpdate(id,
                 {
-                    textinput: req.body.textinput,
-                    numinput: req.body.numinput  
+                    nameinput: req.body.nameinput,
+                    addressinput: req.body.adddressinput,
+                    numinput: req.body.numinput,
+                    instock: req.body.instock,
+                    date: new Date()  
                 },
             )
             res.redirect('/');

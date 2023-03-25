@@ -12,8 +12,10 @@ module.exports = {
     createItem: async (req, res) => {
         const newItem = new ItemList(
             {
-                textinput: req.body.textinput,
-                numinput: req.body.numinput
+                nameinput: req.body.nameinput,
+                addressinput: req.body.addressinput,
+                numinput: req.body.numinput,
+                instock: req.body.instock
             }
         )
         try {
