@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/output.css">
 </head>
 <body>
     <h1>This is the homepage</h1>
     <form action="/new" method="POST">
         <label for="nameinput">Pharmacy Name</label>
-        <input type="text" name="nameinput">
+        <input class="input input-bordered input-primary input-md w-full max-w-xs" type="text" name="nameinput">
         <br>
         <label for="addressinput">Pharmacy Address</label>
-        <input type="text" name="addressinput">
+        <input class="input input-bordered input-primary input-md w-full max-w-xs" type="text" name="addressinput">
         <br>
         <label for="numinput">Phone Number</label>
-        <input type="text" name="numinput">
+        <input class="input input-bordered input-primary input-md w-full max-w-xs" type="text" name="numinput">
         <br>
         <span>In Stock?</span><br>
-        <input type="radio" id="yes" name="instock" value="Yes">
+        <input class="radio radio-primary" type="radio" id="yes" name="instock" value="Yes">
         <label for="yes">Yes</label><br>
-        <input type="radio" id="no" name="instock" value="No">
+        <input class="radio radio-primary" type="radio" id="no" name="instock" value="No">
         <label for="no">No</label><br>
-        <button type="submit">Add</button>
+        <button class="btn btn-wide" type="submit">Add</button>
     </form>
     <ul>
        <% itemList.forEach(item => { %>
