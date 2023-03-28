@@ -27,17 +27,27 @@
         <button class="btn btn-wide" type="submit">Add</button>
     </form>
     <ul>
+        <div class="flex justify-center items-center">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-5 grid-cols-1">
        <% itemList.forEach(item => { %>
         <li>
-             <div><%= item.nameinput %></div>
-             <div><%= item.addressinput %></div>
-             <div><%= item.numinput %></div>
-             <div><span>In Stock?</span><%= item.instock %></div>
-             <div><span>Last Updated:</span><%= item.date.toLocaleString() %></div>
-             <a href="/edit/<%= item._id %>">Edit</a>
-             <a href="/edit/remove/<%= item._id %>">Remove</a>
+            <div class="card w-96 bg-base-100 shadow-xl">
+                 <div class="card-body">
+                    <div class="card-title"><%= item.nameinput %></div>
+                    <div><%= item.addressinput %></div>
+                    <div><%= item.numinput %></div>
+                    <div><span>In Stock?</span><%= item.instock %></div>
+                    <div><span>Last Updated:</span><%= item.date.toLocaleString() %></div>
+                    <div class="card-actions justify-end">
+                    <a href="/edit/<%= item._id %>" class="btn btn-secondary">Edit</a>
+                    <a href="/edit/remove/<%= item._id %>" class="btn btn-secondary">Remove</a>
+                    </div>
+                 </div>
+             </div>
         </li>
     <% }) %>
+    </div>
+</div>
     </ul>
 </body>
 </html>
