@@ -1403,6 +1403,10 @@ html {
   margin-bottom: 0.75rem;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -1446,6 +1450,10 @@ html {
 .bg-base-100 {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 
 .text-orange-700 {
