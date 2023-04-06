@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="/output.css">
 </head>
 <body>
-    <img src="../public/assets/Vintage Retro Peachy Lemonade Drink Logo.png" alt="">
-    <h1>This is the homepage</h1>
+    
+    <div class="flex justify-center">
+    <img src="/assets/dwma_logo.png" alt="">
+    </div>
    
     <div class="flex justify-center pb-6">
     <form action="/new" method="POST">
@@ -40,7 +42,7 @@
                     <div class="card-title"><%= item.nameinput %></div>
                     <div><%= item.addressinput %></div>
                     <div><%= item.numinput %></div>
-                    <div><span>In Stock?</span><%= item.instock %></div>
+                    <div><span class="text-secondary-focus font-bold pr-5">In Stock?</span><%= item.instock %></div>
                     <div><span>Last Updated:</span><%= item.date.toLocaleString() %></div>
                     <div class="card-actions justify-end">
                     <a href="/edit/<%= item._id %>" class="btn btn-secondary">Edit</a>

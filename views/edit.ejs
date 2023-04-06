@@ -9,43 +9,61 @@
 </head>
 <body>
     <section>
-        <h1>This is the Edit Page!</h1>
+        <div class="flex justify-center">
+            <img src="/assets/dwma_logo.png" alt="">
+            </div>
         <section>
             <ul>
+                <div class="flex justify-center items-center">
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-5 grid-cols-1">
                 <% itemList.forEach(item => { %>
                     <% if (item._id == idItem) { %>
                     <li>
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
                         <form  action="/edit/update/<%= item._id%>" method="POST">
                             <label for="nameinput">Input Text</label>
-                            <input type="text" name="nameinput" value="<%= item.nameinput %>">
+                            <input class="input input-bordered input-primary input-sm m-1 text-secondary-focus" type="text" name="nameinput" value="<%= item.nameinput %>">
                             <br>
                             <label for="addressinput">Input Address</label>
-                            <input type="text" name="addressinput" value="<%= item.addressinput %>">
+                            <input class="input input-bordered input-primary input-sm m-1 text-secondary-focus" type="text" name="addressinput" value="<%= item.addressinput %>">
                             <br>
                             <label for="numinput">Input Number</label>
-                            <input type="text" name="numinput" value="<%= item.numinput %>">
+                            <input class="input input-bordered input-primary input-sm mb-2 text-secondary-focus" type="text" name="numinput" value="<%= item.numinput %>">
                             <br>
-                            <span class="text-orange-700">In Stock?</span><br>
+                            <span class="text-secondary-focus font-bold pr-5">In Stock?</span>
                             <input type="radio" id="yes" name="instock" value="Yes">
-                            <label for="yes">Yes</label><br>
+                            <label for="yes">Yes</label>
                             <input type="radio" id="no" name="instock" value="No">
-                            <label for="no">No</label><br>
-                            <button type="submit">Confirm</button>
-                            <a href="/">Cancel</a>
+                            <label for="no">No</label>
+                            <div class="card-actions justify-end mt-2">
+                            <button type="submit" class="btn btn-primary">Confirm</button>
+                            <a href="/" class="btn btn-primary">Cancel</a>
+                        </div>
                         </form>
+                    </div>
+                    </div>
                     </li>
                     <% } else { %>
                     <li>
-                        <div><%= item.nameinput %></div>
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                        <div class="card-title"><%= item.nameinput %></div>
                         <div><%= item.addressinput %></div>
                         <div><%= item.numinput %></div>
-                        <div><span>In Stock?</span><%= item.instock %></div>
+                        <div><span class="text-secondary-focus font-bold pr-5">In Stock?</span><%= item.instock %></div>
                         <div><span>Last Updated:</span><%= item.date.toLocaleString() %></div>
-                        <a href="/edit/<%= item._id %>">Edit</a>
-                        <a href="/edit/remove/<%= item._id %>">Remove</a>
+                        <div class="card-actions justify-end">
+                        <a href="/edit/<%= item._id %>" class="btn btn-secondary">Edit</a>
+                        <a href="/edit/remove/<%= item._id %>" class="btn btn-secondary">Remove</a>
+                    </div>
+                    </div>
+                    </div>
                     </li>
                     <% } %>
                 <% }) %>
+                </div>
+                </div>
             </ul>
         </section>
     </section>
