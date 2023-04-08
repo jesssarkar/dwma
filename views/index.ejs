@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>DWMA</title>
     <link rel="stylesheet" href="/output.css">
 </head>
 <body>
@@ -12,26 +12,16 @@
     <div class="flex justify-center">
     <img src="/assets/dwma_logo.png" alt="">
     </div>
+
+    <div class="hero h-screen/2 bg-base-200">
+        <div class="hero-content text-center">
+          <div class="max-w-3xl">
+            <h1 class="text-5xl font-bold text-secondary-focus">Hello There!</h1>
+            <p class="py-6 text-xl">We are a community-driven platform that aims to help you find pharmacies with Adderall in stock. By sharing your experiences and insights, you can help fellow users save time and avoid frustration. Our site aggregates information from users and provides real-time updates on which pharmacies have Adderall in stock. Join us today and let's make the search for Adderall a little easier! </p>
+          </div>
+        </div>
+      </div>
    
-    <div class="flex justify-center pb-6">
-    <form action="/new" method="POST">
-        <label for="nameinput">Pharmacy Name</label>
-        <input class="input input-bordered input-primary input-md w-full max-w-xs" type="text" name="nameinput">
-        <br>
-        <label for="addressinput">Pharmacy Address</label>
-        <input class="input input-bordered input-primary input-md w-full max-w-xs" type="text" name="addressinput">
-        <br>
-        <label for="numinput">Phone Number</label>
-        <input class="input input-bordered input-primary input-md w-full max-w-xs" type="text" name="numinput">
-        <br>
-        <span>In Stock?</span><br>
-        <input class="radio radio-primary" type="radio" id="yes" name="instock" value="Yes">
-        <label for="yes">Yes</label><br>
-        <input class="radio radio-primary" type="radio" id="no" name="instock" value="No">
-        <label for="no">No</label><br>
-        <button class="btn btn-wide m-4" type="submit">Add</button>
-    </form>
-    </div>
     <ul>
         <div class="flex justify-center items-center">
         <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-5 grid-cols-1">
@@ -53,8 +43,28 @@
         </li>
     <% }) %>
     </div>
-</div>
+    </div>
     </ul>
+
+    <div class="flex justify-center pb-6">
+        <form action="/new" method="POST">
+            <label for="nameinput">Pharmacy Name</label>
+            <input class="input input-bordered input-primary input-md w-full max-w-xs" type="text" name="nameinput">
+            <br>
+            <label for="addressinput">Pharmacy Address</label>
+            <input class="input input-bordered input-primary input-md w-full max-w-xs" type="text" name="addressinput">
+            <br>
+            <label for="numinput">Phone Number</label>
+            <input class="input input-bordered input-primary input-md w-full max-w-xs" type="text" name="numinput">
+            <br>
+            <span>In Stock?</span><br>
+            <input class="radio radio-primary" type="radio" id="yes" name="instock" value="Yes">
+            <label for="yes">Yes</label><br>
+            <input class="radio radio-primary" type="radio" id="no" name="instock" value="No">
+            <label for="no">No</label><br>
+            <button class="btn btn-wide m-4" type="submit">Add</button>
+        </form>
+        </div>
 </body>
 </html>
 
