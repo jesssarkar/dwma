@@ -900,6 +900,15 @@ html {
   grid-row-start: 1;
 }
 
+.hero-overlay {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  height: 100%;
+  width: 100%;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.5;
+}
+
 .hero-content {
   z-index: 0;
   display: flex;
@@ -1517,6 +1526,11 @@ html {
   margin: 1rem;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1579,13 +1593,17 @@ html {
   background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
 }
 
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
-.pb-6 {
-  padding-bottom: 1.5rem;
+.pr-3 {
+  padding-right: 0.75rem;
 }
 
 .pr-5 {
@@ -1594,6 +1612,11 @@ html {
 
 .text-center {
   text-align: center;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-5xl {
@@ -1610,9 +1633,9 @@ html {
   font-weight: 700;
 }
 
-.text-neutral-content {
+.text-base-100 {
   --tw-text-opacity: 1;
-  color: hsl(var(--nc) / var(--tw-text-opacity));
+  color: hsl(var(--b1) / var(--tw-text-opacity));
 }
 
 .text-secondary-focus {

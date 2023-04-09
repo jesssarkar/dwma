@@ -10,21 +10,22 @@
 <body>
     
     <div class="flex justify-center">
-    <img src="/assets/dwma_logo.png" alt="">
+    <img src="/assets/dwma_logo.png" alt="logo">
     </div>
 
-    <div class="hero h-screen/2 bg-base-200">
+   <div class="hero md:h-screen/2 bg-base-200">
         <div class="hero-content text-center">
           <div class="max-w-3xl">
             <h1 class="text-5xl font-bold text-secondary-focus">Hello There!</h1>
             <p class="py-6 text-xl">We are a community-driven platform that aims to help you find pharmacies with Adderall in stock. By sharing your experiences and insights, you can help fellow users save time and avoid frustration. Our site aggregates information from users and provides real-time updates on which pharmacies have Adderall in stock. Join us today and let's make the search for Adderall a little easier! </p>
           </div>
         </div>
-      </div>
-   
+      </div> 
+
+  
     <ul>
-        <div class="flex justify-center items-center">
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-5 grid-cols-1">
+        <div class="flex justify-center items-center my-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-5 grid-cols-1 my-6">
        <% itemList.forEach(item => { %>
         <li>
             <div class="card w-96 bg-base-100 shadow-xl">
@@ -33,10 +34,10 @@
                     <div><%= item.addressinput %></div>
                     <div><%= item.numinput %></div>
                     <div><span class="text-secondary-focus font-bold pr-5">In Stock?</span><%= item.instock %></div>
-                    <div><span>Last Updated:</span><%= item.date.toLocaleString() %></div>
+                    <div><span class='text-secondary-focus font-bold pr-3'>Last Updated:</span><%= item.date.toLocaleString() %></div>
                     <div class="card-actions justify-end">
-                    <a href="/edit/<%= item._id %>" class="btn btn-secondary">Edit</a>
-                    <a href="/edit/remove/<%= item._id %>" class="btn btn-secondary">Remove</a>
+                    <a href="/edit/<%= item._id %>" class="btn btn-secondary">Update</a>
+                    <a href="/edit/remove/<%= item._id %>" class="btn btn-secondary">Delete</a>
                     </div>
                  </div>
              </div>
@@ -46,7 +47,18 @@
     </div>
     </ul>
 
-    <div class="flex justify-center pb-6">
+    <div class="hero h-screen/2" style="background-image: url('/assets/pexels-tara-winstead-7723334.jpg');">
+      <div class="hero-overlay bg-opacity-40"></div>
+      <div class="hero-content text-center">
+        <div class="max-w-3xl">
+          <h1 class="text-5xl font-bold text-base-100">Know Something We Don't?</h1>
+          <p class="py-6 text-2xl text-base-100">If you have information about a pharmacy's current stock, please share it below. Your contribution will help others save time and avoid frustration in their search for Adderall. Thank you for being a part of our community! </p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center my-6">
         <form action="/new" method="POST">
             <label for="nameinput">Pharmacy Name</label>
             <input class="input input-bordered input-primary input-md w-full max-w-xs" type="text" name="nameinput">
