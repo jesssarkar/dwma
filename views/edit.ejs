@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="/output.css">
 </head>
 <body>
-    <section>
+    <header>
         <div class="flex justify-center">
             <img src="/assets/dwma_logo.png" alt="">
             </div>
+    </header>
+    <section>
         <section>
             <ul>
                 <div class="flex justify-center items-center">
@@ -22,13 +24,13 @@
                         <div class="card w-96 bg-base-100 shadow-xl">
                         <div class="card-body">
                         <form  action="/edit/update/<%= item._id%>" method="POST">
-                            <label for="nameinput">Input Text</label>
+                            <label for="nameinput">Pharmacy Name</label>
                             <input class="input input-bordered input-primary input-sm m-1 text-secondary-focus" type="text" name="nameinput" value="<%= item.nameinput %>">
                             <br>
-                            <label for="addressinput">Input Address</label>
+                            <label for="addressinput">Address</label>
                             <input class="input input-bordered input-primary input-sm m-1 text-secondary-focus" type="text" name="addressinput" value="<%= item.addressinput %>">
                             <br>
-                            <label for="numinput">Input Number</label>
+                            <label for="numinput">Phone Number</label>
                             <input class="input input-bordered input-primary input-sm mb-2 text-secondary-focus" type="text" name="numinput" value="<%= item.numinput %>">
                             <br>
                             <span class="text-secondary-focus font-bold pr-5">In Stock?</span>
@@ -52,7 +54,7 @@
                         <div><%= item.addressinput %></div>
                         <div><%= item.numinput %></div>
                         <div><span class="text-secondary-focus font-bold pr-5">In Stock?</span><%= item.instock %></div>
-                        <div><span>Last Updated:</span><%= item.date.toLocaleString() %></div>
+                        <div><span class="text-secondary-focus font-bold pr-3">Last Updated:</span><%= item.date.toLocaleString() %></div>
                         <div class="card-actions justify-end">
                         <a href="/edit/<%= item._id %>" class="btn btn-secondary">Update</a>
                         <a href="/edit/remove/<%= item._id %>" class="btn btn-secondary">Delete</a>

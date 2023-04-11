@@ -28,7 +28,7 @@ module.exports = {
             await ItemList.findByIdAndUpdate(id,
                 {
                     nameinput: req.body.nameinput,
-                    addressinput: req.body.adddressinput,
+                    addressinput: req.body.addressinput,
                     numinput: req.body.numinput,
                     instock: req.body.instock,
                     date: new Date()  
