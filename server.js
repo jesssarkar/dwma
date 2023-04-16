@@ -9,8 +9,6 @@ const editRoutes = require('./routes/edit')
 
 require('dotenv').config({path: './config/.env'})
 
-connectDB()
-
 app.set("view engine", "ejs")
 app.use(express.static("public"))
 app.use(express.urlencoded({extended: true}))
@@ -20,5 +18,8 @@ app.use('/', homeRoutes )
 
 
 
+connectDB().then(() => {
+    app.listen(PORT, () => console.log(`Server Running on PORT ${PORT}`)
+    )
+})
 
-app.listen(PORT, () => console.log(`Server Running on PORT ${PORT}`))
