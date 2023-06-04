@@ -1,4 +1,4 @@
-# dwma
+# DWMA
 DWMA is a web app that leverages crowdsourcing to provide real-time information on Adderall availability at pharmacies, helping users locate the medication more efficiently.
 
 **Link to project:** https://dwma-app.cyclic.app/
